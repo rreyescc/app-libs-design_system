@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# App Design System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el repositorio del sistema de diseño de la aplicación para el megaproyecto.
 
-Currently, two official plugins are available:
+## Instalación
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para utilizar este sistema de diseño, sigue los siguientes pasos:
 
-## Expanding the ESLint configuration
+1. Clona este repositorio en tu máquina local.
+2. Abre el directorio del repositorio en tu editor de código preferido.
+3. Ejecuta `npm install` para instalar las dependencias necesarias.
+4. ¡Listo! Ahora puedes comenzar a utilizar el sistema de diseño en tu proyecto.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Uso
 
-- Configure the top-level `parserOptions` property like this:
+El sistema de diseño incluye una serie de componentes y estilos predefinidos que puedes utilizar en tu aplicación. A continuación, se muestra un ejemplo de cómo importar y utilizar un componente:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```javascript
+import { Button } from 'design-system';
+
+function App() {
+  return (
+    <div>
+      <Button>Click me</Button>
+    </div>
+  );
+}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Contribución
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Si deseas contribuir al sistema de diseño, sigue estos pasos:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Haz un fork de este repositorio.
+2. Crea una rama con el nombre de tu nueva funcionalidad o mejora.
+3. Realiza los cambios necesarios en tu rama.
+4. Envía un pull request a este repositorio.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Para más información, consulta el archivo [LICENSE](./LICENSE).
