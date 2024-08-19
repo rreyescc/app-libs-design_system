@@ -4,6 +4,6 @@ interface ButtonProps {
 
 export const Button = ({ text }: ButtonProps) => {
   return (
-    <button>{text}</button>
+    <button type="button">{text}</button>
   )
 }
