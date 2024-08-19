@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Label } from "./Label";
+import { Label } from './Label';
 
-const meta = {
-  title: 'Design System/Atons/Label',
+const meta: Meta<typeof Label> = {
+  title: 'Design System/Atoms/Label',
   argTypes: {
    // color: { control: 'inline-radio'  }
   },
