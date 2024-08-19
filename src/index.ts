@@ -1,0 +1,1 @@
+export { Label } from './stories/components/atoms/label/Label';

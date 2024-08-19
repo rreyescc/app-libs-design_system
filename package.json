@@ -1,19 +1,43 @@
 {
-  "name": "app-design_system",
-  "private": true,
-  "version": "0.0.0",
+  "name": "rr-design_system",
+  "private": false,
+  "version": "0.0.1-rc7",
   "type": "module",
+  "keywords": [
+    "react",
+    "components",
+    "storybook",
+    "design system"
+  ],
+  "license": "MIT",
+  "homepage": "https://dominio.pe",
+  "repository": {
+    "url": "https://",
+    "type": "git"
+  },
+  "files": [
+    "dist/"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
   "scripts": {
     "dev": "npm run storybook",
-    "build": "tsc -b && vite build",
+    "build": "npm run clean && tsc && npm run copy-css-file",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "build-storybook": "storybook build",
+    "clean": "rimraf dist/",
+    "copy-css-file": "copyfiles -u 1 src/**/**/*.css dist/"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
@@ -29,11 +53,15 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.8.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "eslint-plugin-storybook": "^0.8.0",
     "globals": "^15.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
     "storybook": "^8.2.8",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.0",
